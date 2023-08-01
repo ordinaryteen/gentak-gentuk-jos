@@ -1,0 +1,51 @@
+#buat bikin mesinnya sayy
+def sum(a, b):
+    for i in range(3):
+        for j in range(3):
+            a[i][j] = a[i][j] + b[i][j]
+
+def subs(a, b):
+    for i in range(3):
+        for j in range(3):
+            a[i][j] = a[i][j] - b[i][j]
+
+def mult(a, b):
+    for i in range(3):
+        for j in range(3):
+            a[i][j] = a[i][j] * b[i][j]
+
+def div(a, b):
+    for i in range(3):
+        for j in range(3):
+            a[i][j] = a[i][j] / b[i][j]
+
+#nah, ini array dari pa her gwejh edit tipis tipis ga ngaruh
+arr1 = [
+    [12, 32, 34],
+    [53, 43, 12],
+    [32, 45, 90]
+]
+
+arr2 = [
+    [74, 86, 35],
+    [17, 32, 76],
+    [76, 36, 86]
+]
+
+#kalo yg ini bwat ngemasukkin opsi mna yg kt mw
+choice = int(input())
+
+if choice == 1:
+    sum(arr1, arr2)
+elif choice == 2:
+    subs(arr1, arr2)
+elif choice == 3:
+    mult(arr1, arr2)
+elif choice == 4:
+    div(arr1, arr2)
+
+#ini buat ndudui hasilny ntar 
+for i in range(3):
+    for j in range(3):
+        print(arr1[i][j], end=" ")
+    print()
